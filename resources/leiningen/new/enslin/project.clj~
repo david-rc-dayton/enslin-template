@@ -1,0 +1,11 @@
+(defproject {{name}} "0.1.0-SNAPSHOT"
+  :description "FIXME: write a description"
+  :dependencies [[org.clojure/clojure "1.7.0"]
+                 [com.github.insubstantial/substance "7.3"]
+                 [compojure "1.4.0"]
+                 [hiccup "1.0.5"]
+                 [http-kit "2.1.19"]
+                 [seesaw "1.4.5"]]
+  :local-repo ".m2/repository"
+  :main ^:skip-aot enslin.core
+  :profiles {:uberjar {:aot :all :omit-source true}})
