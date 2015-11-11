@@ -4,6 +4,7 @@
                  [com.github.insubstantial/substance "7.3"]
                  [compojure "1.4.0"]
                  [http-kit "2.1.19"]
+                 [ring/ring-json "0.4.0"]
                  [seesaw "1.4.5"]
                  [stencil "0.5.0"]]
   :local-repo ".m2/repository"
