@@ -7,14 +7,14 @@
             [seesaw.core :as s])
   (:gen-class))
 
-(defn enable-debug!
+(defn debug-server
   []
-  (debug! :enabled? true))
+  (debug! :enabled? true)
+  (start-server! routes/app)
+  (println (str "Launching debug server on port " (port) ".")))
 
 (defn -main
   [& args]
   (substance-theme! :dust)
   (start-server! routes/app)
-  (when (debug :enabled?)
-    (println (str "Starting debug server on port " (port) ".")))
   (s/invoke-later (mainframe! (menu/menu-items))))

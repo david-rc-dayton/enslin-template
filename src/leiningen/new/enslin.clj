@@ -33,7 +33,8 @@
              ["src/{{sanitized}}/base/engine.clj" (render "engine.clj" data)]
              ["src/{{sanitized}}/base/swing.clj" (render "swing.clj" data)])
     (mapv #(apply unpack (:name data) %)
-          [["icon.png" "resources/icon.png"]
+          [[".gitignore" ".gitignore"]
+           ["icon.png" "resources/icon.png"]
            ["w3.css" "resources/public/css/w3.css"]
            ["script.js" "resources/public/js/script.js"]
            ["main.mustache" "src/templates/main.mustache"]])))
