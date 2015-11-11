@@ -25,25 +25,15 @@
               :sanitized (name-to-path name)}]
     (main/info "Generating fresh 'lein new' enslin project.")
     (->files data
-             ["project.clj"
-              (render "project.clj" data)]
-             ["src/{{sanitized}}/core.clj"
-              (render "core.clj" data)]
-             ["src/{{sanitized}}/menu.clj"
-              (render "menu.clj" data)]
-             ["src/{{sanitized}}/routes.clj"
-              (render "routes.clj" data)]
-             ["src/{{sanitized}}/settings.clj"
-              (render "settings.clj" data)]
-             ["src/{{sanitized}}/base/engine.clj"
-              (render "engine.clj" data)]
-             ["src/{{sanitized}}/base/swing.clj"
-              (render "swing.clj" data)]
-             ["src/{{sanitized}}/templates/main.clj"
-              (render "main.clj" data)]
-             ["resources/public/css/w3.css"
-              (render "w3.css" data)]
-             ["resources/public/js/script.js"
-              (render "script.js" data)])
+             ["project.clj" (render "project.clj" data)]
+             ["src/{{sanitized}}/core.clj" (render "core.clj" data)]
+             ["src/{{sanitized}}/menu.clj" (render "menu.clj" data)]
+             ["src/{{sanitized}}/routes.clj" (render "routes.clj" data)]
+             ["src/{{sanitized}}/settings.clj" (render "settings.clj" data)]
+             ["src/{{sanitized}}/base/engine.clj" (render "engine.clj" data)]
+             ["src/{{sanitized}}/base/swing.clj" (render "swing.clj" data)])
     (mapv #(apply unpack (:name data) %)
-          [["icon.png" "resources/icon.png"]])))
+          [["icon.png" "resources/icon.png"]
+           ["w3.css" "resources/public/css/w3.css"]
+           ["script.js" "resources/public/js/script.js"]
+           ["main.mustache" "src/templates/main.mustache"]])))
