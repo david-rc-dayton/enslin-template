@@ -16,7 +16,8 @@
   (atom
    {
     :name "{{name}}"
-    :resource-route "/res"
+    :resource-route "/"
+    :launch-path "/"
     :frame-size [800 :by 600]
     :icon (io/resource "icon.png")
     :about-text ["{{name}}" (str "v" (version))]

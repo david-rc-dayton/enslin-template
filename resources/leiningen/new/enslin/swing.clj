@@ -62,7 +62,7 @@
                :title (defaults :name)
                :icon (defaults :icon)
                :menubar (s/menubar :items menu-coll)
-               :content (engine/web-panel "/")
+               :content (engine/web-panel (defaults :launch-path))
                :size (defaults :frame-size)
                :on-close :exit)
               center! s/show!)))
