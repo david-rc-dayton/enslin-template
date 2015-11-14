@@ -36,5 +36,6 @@
           [[".gitignore" ".gitignore"]
            ["icon.png" "resources/icon.png"]
            ["w3.css" "resources/public/css/w3.css"]
+           ["w3-theme-enslin.css" "resources/public/css/w3-theme-enslin.css"]
            ["script.js" "resources/public/js/script.js"]
            ["main.mustache" "resources/templates/main.mustache"]])))
