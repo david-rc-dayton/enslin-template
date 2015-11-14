@@ -1,4 +1,4 @@
-(defproject enslin/lein-template "0.3.1"
+(defproject enslin/lein-template "0.3.2"
   :description "Desktop app template, for Leiningen, using web technology."
   :url "https://github.com/david-rc-dayton/enslin-template"
   :license {:name "The MIT License (MIT)"
