@@ -9,4 +9,4 @@
                  [stencil "0.5.0"]]
   :local-repo ".m2/repository"
   :main ^:skip-aot {{name}}.core
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all :omit-source true}})

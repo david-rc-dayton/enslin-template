@@ -37,4 +37,4 @@
            ["icon.png" "resources/icon.png"]
            ["w3.css" "resources/public/css/w3.css"]
            ["script.js" "resources/public/js/script.js"]
-           ["main.mustache" "src/templates/main.mustache"]])))
+           ["main.mustache" "resources/templates/main.mustache"]])))
