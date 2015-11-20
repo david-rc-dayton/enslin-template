@@ -3,6 +3,8 @@
             [compojure.core :refer [defroutes GET POST]]
             [compojure.route :refer [not-found resources]]
             [ring.middleware.json :refer [wrap-json-response]]
+            [ring.middleware.keyword-params :refer [wrap-keyword-params]]
+            [ring.middleware.params :refer [wrap-params]]
             [stencil.core :refer [render-file]]))
 
 (defroutes handler
@@ -11,4 +13,4 @@
   (GET "/hello/:n" [n] (println "Hello, world!:" n)))
 
 (defroutes app
-  (wrap-json-response handler))
+  (-> handler wrap-keyword-params wrap-params wrap-json-response))
